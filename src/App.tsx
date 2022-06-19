@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
      Sina
-     <Example />
+     <Example name={'Sina'} age={2}/>
     </div>
   );
 }

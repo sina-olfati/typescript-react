@@ -1,15 +1,18 @@
 import React from 'react'
+import {useState} from 'react'
 
 interface Props {
     name: string,
-    age?: number,
-    fn?: (name: string) => void
+    age?: number
 }
 
-const Example: React.FC<Props> = () => {
+const Example: React.FC<Props> = ({}) => {
+  const [count, setCount] = useState<number>(0);
+
   return (
     <div>
-      <input name = "Sina" />
+      <p>{count}</p>
+        <button onClick={() => setCount(count + 1)}>+</button>
     </div>
   )
 }
